@@ -1,0 +1,23 @@
+.fc-sun { background-color:#ff6666; }
+
+.hari-libur-nasional {
+	text-align: center;
+	/* background-color: white; */
+	color:black; 
+	font-size: 9px;
+	padding:1px;
+	white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+
+}
+
+
+
+.hari-libur-nasional:hover{
+  cursor:pointer;
+  overflow:visible;
+  white-space: normal;
+  word-wrap: break-word;
+}
