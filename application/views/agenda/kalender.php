@@ -5,11 +5,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<!-- <style type="text/css">
-			.bgimg {
-				background-image: url('');
-			}
-		</style> -->
 	</head>
 	<body>
     <div class="title_month_year container">
@@ -35,7 +30,7 @@
 			</div>
 		</div>
     </div> -->
-	<div class="draw_kalender" id="draw_kalender" style="background-color:lightblue"></div>
+	<div class="draw_kalender" id="draw_kalender"></div>
     <?php
 /*    echo "<div class='judul_bulan' id='bulan'>".date("F")."</div>";
     echo "<div class='judul_tahun' id='tahun'>".date("Y")."</div>";
@@ -197,7 +192,7 @@
       }
       var month = months_now + 1;
       $.ajax({
-      url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/change_month_year')?>?month="+month+"&years="+years,
+      url : "<?php echo site_url('kalender/change_month_year')?>?month="+month+"&years="+years,
       type: "GET",
       dataType: "JSON",
       success: function(data)
@@ -240,7 +235,7 @@
       var month = months_now + 1;
       var years = years_now;
       $.ajax({
-      url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/change_month_year')?>?month="+month+"&years="+years,
+      url : "<?php echo site_url('kalender/change_month_year')?>?month="+month+"&years="+years,
       type: "GET",
       dataType: "JSON",
       success: function(data)
@@ -291,7 +286,7 @@
       
     function check_events(tanggal){
       $.ajax({
-          url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/check_events')?>/" + tanggal,
+          url : "<?php echo site_url('kalender/check_events')?>/" + tanggal,
           type: "POST",
           dataType: "JSON",
           success: function(data)
@@ -307,7 +302,7 @@
 
     function delete_agenda(id_agenda){
       $.ajax({
-      url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/delete_agenda')?>?id_agenda="+id_agenda,
+      url : "<?php echo site_url('kalender/delete_agenda')?>?id_agenda="+id_agenda,
       type: "GET",
       dataType: "JSON",
       success: function(data)
@@ -322,7 +317,7 @@
 
     function edit_agenda(id_agenda){
       $.ajax({
-      url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/edit_agenda')?>?id_agenda="+id_agenda,
+      url : "<?php echo site_url('kalender/edit_agenda')?>?id_agenda="+id_agenda,
       type: "GET",
       dataType: "JSON",
       success: function(data)
@@ -348,7 +343,7 @@
       var tanggal_full= document.getElementById('title_year').innerText+months[document.getElementById('title_month').innerText]+pad(tanggal);
       var deskripsi = document.getElementById("form_deskripsi_edit").value;
       $.ajax({
-        url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/submit_edit_agenda')?>?deskripsi="+deskripsi+"&tanggal="+tanggal_full+"&time="+time+"&id_agenda="+id_agenda,
+        url : "<?php echo site_url('kalender/submit_edit_agenda')?>?deskripsi="+deskripsi+"&tanggal="+tanggal_full+"&time="+time+"&id_agenda="+id_agenda,
         type: "GET",
         dataType: "JSON",
         success: function(data)
@@ -367,7 +362,7 @@
       var tanggal_full= document.getElementById('title_year').innerText+months[document.getElementById('title_month').innerText]+pad(tanggal);
       var deskripsi = document.getElementById("form_deskripsi").value;
       $.ajax({
-        url : "<?php echo site_url('Admin/Kalender/Kalender_agenda/submit_agenda')?>?deskripsi="+deskripsi+"&tanggal="+tanggal_full+"&time="+time,
+        url : "<?php echo site_url('kalender/submit_agenda')?>?deskripsi="+deskripsi+"&tanggal="+tanggal_full+"&time="+time,
         type: "GET",
         dataType: "JSON",
         success: function(data)

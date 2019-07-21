@@ -19,30 +19,36 @@ class Auth extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function login_process(){
-		$this->db->trans_start();
-		$lastid = '';
-		$getlast_id = $this->Main_model->getLastID('guest');
-		foreach ($getlast_id as $key => $value) {
-			$lastid = ($value->id)+1;
-		}
-		$data = array(
-			'id' => $lastid,
-			'fullname' => $this->input->post('fullname'),
-			'address' => $this->input->post('address'),
-			'phone_number' => $this->input->post('phone_number'),
-			'created_by' => $lastid
-			);
-		$save = $this->User_model->tambahdata('guest',$data);
-		$sess_data['id'] = $lastid;
-		$sess_data['username'] = $this->input->post('fullname');
-		$this->session->set_userdata($sess_data);
-		$this->db->trans_complete();
-		if($this->db->trans_status() === false){
-			$this->session->set_flashdata('gagal','<br><br><br><div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>silahkan ulangi lagi.<br /></div>' );
+		if($this->input->post('fullname')==NULL OR $this->input->post('address')==NULL OR $this->input->post('phone_number')==NULL){
+			$this->session->set_flashdata('gagal','<br><br><br><div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data harus dilengkapi.<br /></div>' );
             echo "<script>window.location='".base_url()."'</script>";
-		}
-		else{
-            echo "<script>window.location='".base_url()."beranda/'</script>";
+		}else{
+			$this->db->trans_start();
+			$lastid = '';
+			$getlast_id = $this->Main_model->getLastID('guest');
+			foreach ($getlast_id as $key => $value) {
+				$lastid = ($value->id)+1;
+			}
+			$data = array(
+				'id' => $lastid,
+				'fullname' => $this->input->post('fullname'),
+				'address' => $this->input->post('address'),
+				'phone_number' => $this->input->post('phone_number'),
+				'created_by' => $lastid
+				);
+			$save = $this->User_model->tambahdata('guest',$data);
+			$sess_data['id'] = $lastid;
+			$sess_data['username'] = $this->input->post('fullname');
+			$sess_data['level'] = 'user';
+			$this->session->set_userdata($sess_data);
+			$this->db->trans_complete();
+			if($this->db->trans_status() === false){
+				$this->session->set_flashdata('gagal','<br><br><br><div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>silahkan ulangi lagi.<br /></div>' );
+				echo "<script>window.location='".base_url()."'</script>";
+			}
+			else{
+				echo "<script>window.location='".base_url()."beranda/'</script>";
+			}
 		}
 	}
 	public function logout(){

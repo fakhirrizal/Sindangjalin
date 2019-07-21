@@ -5,7 +5,7 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		if(($this->session->userdata('id'))!=NULL){
+		if(($this->session->userdata('id'))!=NULL AND $this->session->userdata('level')=='user'){
             echo "<script>window.location='".base_url('beranda')."'</script>";
 		}
 		else{
@@ -14,11 +14,15 @@ class User extends CI_Controller {
 	}
 	public function login()
 	{
-		if(($this->session->userdata('id'))!=NULL){
+		if(($this->session->userdata('id'))!=NULL AND $this->session->userdata('level')=='admin'){
             echo "<script>window.location='".base_url('User/beranda')."'</script>";
 		}
 		else{
-			$this->load->view('login');
+			if ($this->agent->is_mobile()){
+				$this->load->view('mobile_login');
+			}else{
+				$this->load->view('login');
+			}
 		}
 	}
 	public function daftar(){
@@ -58,13 +62,14 @@ class User extends CI_Controller {
 				$sess_data['username'] = $value->username;
 				$sess_data['id'] = $value->id;
 				$sess_data['status'] = $value->status;
-		        $sess_data['email'] = $this->input->post('email');
+				$sess_data['email'] = $this->input->post('email');
+				$sess_data['level'] = 'admin';
 		        $this->session->set_userdata($sess_data);
 			}
 			redirect('User/beranda');
 		}
 		else{
-			$this->session->set_flashdata('error','<div class="alert alert-danger alert-dismissible" role="alert" style="text-align: justify;">
+			$this->session->set_flashdata('error','<br><br><br><div class="alert alert-danger alert-dismissible" role="alert" style="text-align: justify;">
 											  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 											  <strong>Ups! </strong>Email atau Kata Sandi yang Anda masukkan tidak valid.
 											</div>	' );

@@ -100,20 +100,23 @@
 						<?= $row->catatan; ?>
 						</div>
 					</div>
-					<div class="form-group form-md-line-input has-danger">
+					<!-- <div class="form-group form-md-line-input has-danger">
 						<label class="col-md-2 control-label" for="form_control_1">Dukungan Anggaran</label>
-						<div class="col-md-10">
+						<div class="col-md-10"> -->
 						<?php
-						if($row->anggaran==NULL){
-						echo 'Rp 0.00';
-						}
-						else{
-						echo 'Rp '.number_format($row->anggaran,2);
-						}
+						// if($row->anggaran==NULL){
+						// echo 'Rp 0.00';
+						// }
+						// else{
+						// echo 'Rp '.number_format($row->anggaran,2);
+						// }
 						?>
-						</div>
-					</div>
+						<!-- </div>
+					</div> -->
 					<hr>
+					<?php
+						if($row->alat_kelengkapan=='anggota setwan'){
+					?>
 					<div class="form-group form-md-line-input has-danger">
 						<label class="col-md-12 control-label" for="form_control_1">Daftar Peserta</label>
 					</div>
@@ -135,7 +138,56 @@
 						</ol>
 						</div>
 					</div>
-				<?php } } ?>
+					<?php
+						}else{
+					?>
+					<div class="form-group form-md-line-input has-danger">
+						<label class="col-md-12 control-label" for="form_control_1">Daftar Peserta</label>
+					</div>
+					<div class="form-group form-md-line-input has-danger">
+						<div class="col-md-12" style="text-align: left">
+						<ol>
+						<?php
+						foreach($detail_jaldis as $content)
+						{
+							foreach ($content as $key => $value ) {
+							$$key=$value;
+						}
+						if($keterangan=='bukan anggota legislatif'){
+							echo '';
+						}else{
+						echo '
+								<div class="col-md-4">
+								<li>'.$nama.'</li>
+								</div>
+						';}}
+						?>
+						</ol>
+						</div>
+					</div>
+					<div class="form-group form-md-line-input has-danger">
+						<label class="col-md-12 control-label" for="form_control_1">Pendamping</label>
+					</div>
+					<div class="form-group form-md-line-input has-danger">
+						<div class="col-md-12" style="text-align: left">
+						<ol>
+						<?php
+						foreach($detail_jaldis as $content)
+						{
+							foreach ($content as $key => $value ) {
+							$$key=$value;
+						}
+						if($keterangan=='bukan anggota legislatif'){
+						echo '
+								<div class="col-md-4">
+								<li>'.$nama.'</li>
+								</div>
+						';}else{echo'';}}
+						?>
+						</ol>
+						</div>
+					</div>
+				<?php } } } ?>
 				</div>
 				<!-- <br>
 				<div class="btn-group">

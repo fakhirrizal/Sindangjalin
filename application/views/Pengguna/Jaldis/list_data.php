@@ -32,7 +32,6 @@
 			<hr>
 			<div class="portlet-title">
 				<a class="btn blue btn-outline" href='<?= base_url('jaldis'); ?>'><i class='icon-refresh'></i> Refresh</a>
-				<a class="btn blue btn-outline" href='<?= base_url('download_jaldis'); ?>'><i class='icon-cloud-download'></i> Download</a>
 			</div>
 			<div class="portlet-body">
 				<table class="table table-bordered table-striped" id="tbl">

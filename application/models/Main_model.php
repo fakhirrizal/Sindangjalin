@@ -26,8 +26,7 @@ class Main_model extends CI_Model{
     }
     function deleteData($table,$data)
     {
-		$res = $this->db->delete($table,$data);
-		return $res;
+        $this->db->delete($table,$data);
     }
     public function getKodeJaldis()
     {

@@ -35,7 +35,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <a class="dashboard-stat dashboard-stat-v2 green" href="#">
                                 <div class="visual">
                                     <i class="fa fa-dollar"></i>
@@ -65,7 +65,7 @@
                             </a>
                         </div>
                         
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <a class="dashboard-stat dashboard-stat-v2 purple" href="#">
                                 <div class="visual">
                                     <i class="fa fa-dollar"></i>
@@ -76,7 +76,7 @@
                                     <div class="desc"> Total Anggaran </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="clearfix"></div>
                     <!-- END DASHBOARD STATS 1-->

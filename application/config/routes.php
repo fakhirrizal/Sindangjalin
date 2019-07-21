@@ -71,6 +71,8 @@ $route['rapat'] = 'Pengguna/Rapat';
 $route['laporan/rapat'] = 'Pengguna/Laporan/rapat';
 $route['laporan/jaldis'] = 'Pengguna/Laporan/jaldis';
 $route['laporan/detail_jaldis/(:any)'] = 'Pengguna/Laporan/detail_jaldis/$1';
+
+$route['pengguna/mobile'] = 'Pengguna/Mobile/beranda';
 /* Notulen */
 /* Admin */
 $route['admin'] = 'User/login';

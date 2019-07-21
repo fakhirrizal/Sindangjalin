@@ -1,11 +1,10 @@
 <html lang="en"><head>
     <meta charset="utf-8">
+    <title>Sindangjalin | Beta Version</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="keywords" content="Transparansi Publik, Aplikasi Perjalanan Dinas, DPRD Kota Semarang, Sindangjalin">
-	<meta content="Situs resmi dari DPRD Kota Semarang mengenai Perjalanan Dinas yang dilaksanakan" name="description" />
-	<meta content="DPRD Kota Semarang" name="author" />
-	<title>Sindangjalin | DPRD Kota Semarang</title>
+    <meta content="" name="description">
+    <meta content="" name="author">
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
     <link href="https://web.xegel.id/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -26,7 +25,7 @@
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="<?=base_url('assets/user.png');?>"></head>
+    <link rel="shortcut icon" href="<?=base_url('assets/hai.ico');?>"></head>
 <!-- END HEAD -->
 
 <body class=" login">
@@ -93,7 +92,7 @@
                         <div class="col-xs-5 bs-reset">   </div>                
                         <div class="col-xs-7 bs-reset">
                             <div class="login-copyright text-right">
-                                <p>2019 © Sindangjalin - DPRD Kota Semarang</p>
+                                <p>2018 © Sindangjalin - DPRD Kota Semarang</p>
                             </div>
                         </div>
                     </div>

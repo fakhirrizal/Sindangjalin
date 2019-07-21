@@ -1,5 +1,5 @@
 <?php
-if(($this->session->userdata('id'))==NULL){
+if(($this->session->userdata('id'))==NULL AND $this->session->userdata('level')=='admin'){
 	echo "<script>alert('Harap login terlebih dahulu')</script>";
 	echo "<script>window.location='".base_url()."admin/'</script>";
 }

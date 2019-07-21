@@ -1,3 +1,10 @@
+<?php
+if(($this->session->userdata('id'))==NULL){
+    echo "<script>alert('Harap login terlebih dahulu')</script>";
+    echo "<script>window.location='".base_url()."admin/'</script>";
+}
+else{
+echo'';}?>
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.6
@@ -51,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="<?=base_url('assets/global/plugins/jquery.min.js');?>" type="text/javascript"></script>
         <link rel="shortcut icon" href="<?=base_url('assets/hai.ico');?>" /> </head>
     <!-- END HEAD -->
-
+    
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white" onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
@@ -601,6 +608,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!-- END THEME PANEL -->
                     <!-- BEGIN PAGE BAR -->
+                    
                     <div class="page-bar">
                         <ul class="page-breadcrumb">
                             <li>
@@ -671,199 +679,200 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
                     </div>
+
                     
-<script type="text/javascript">        
-    function tampilkanwaktu(){         //fungsi ini akan dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik    
-    var waktu = new Date();            //membuat object date berdasarkan waktu saat 
-    var sh = waktu.getHours() + "";    //memunculkan nilai jam, //tambahan script + "" supaya variable sh bertipe string sehingga bisa dihitung panjangnya : sh.length    //ambil nilai menit
-    var sm = waktu.getMinutes() + "";  //memunculkan nilai detik    
-    var ss = waktu.getSeconds() + "";  //memunculkan jam:menit:detik dengan menambahkan angka 0 jika angkanya cuma satu digit (0-9)
-    document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
-    }
-</script>
-<script language="JavaScript">
-            function selectAll(source) {
-              checkboxes = document.getElementsByName('nama[]');
-              for(var i in checkboxes)
-                checkboxes[i].checked = source.checked;
-            }
-        </script>
-        <script language="JavaScript">
-            function selectAll2(source) {
-              checkboxes = document.getElementsByName('nama2[]');
-              for(var i in checkboxes)
-                checkboxes[i].checked = source.checked;
-            }
-        </script>
-<script type="text/javascript">
-    // $(function() {
-    //  $('#loading').ajaxStart(function(){
-    //      $(this).fadeIn();
-    //  }).ajaxStop(function(){
-    //      $(this).fadeOut();
-    //  });
-    // });
+                    <script type="text/javascript">        
+                        function tampilkanwaktu(){         //fungsi ini akan dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik    
+                        var waktu = new Date();            //membuat object date berdasarkan waktu saat 
+                        var sh = waktu.getHours() + "";    //memunculkan nilai jam, //tambahan script + "" supaya variable sh bertipe string sehingga bisa dihitung panjangnya : sh.length    //ambil nilai menit
+                        var sm = waktu.getMinutes() + "";  //memunculkan nilai detik    
+                        var ss = waktu.getSeconds() + "";  //memunculkan jam:menit:detik dengan menambahkan angka 0 jika angkanya cuma satu digit (0-9)
+                        document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
+                        }
+                    </script>
+                    <script language="JavaScript">
+                                function selectAll(source) {
+                                  checkboxes = document.getElementsByName('nama[]');
+                                  for(var i in checkboxes)
+                                    checkboxes[i].checked = source.checked;
+                                }
+                    </script>
+                    <script language="JavaScript">
+                        function selectAll2(source) {
+                          checkboxes = document.getElementsByName('nama2[]');
+                          for(var i in checkboxes)
+                            checkboxes[i].checked = source.checked;
+                        }
+                    </script>
+                    <script type="text/javascript">
+                        // $(function() {
+                        //  $('#loading').ajaxStart(function(){
+                        //      $(this).fadeIn();
+                        //  }).ajaxStop(function(){
+                        //      $(this).fadeOut();
+                        //  });
+                        // });
 
-    function cariAnggota(namaAnggota) {
-        if(namaAnggota.length == 0) {
-            $('#hasilPencarian').hide();
-        } else {
-            $.post("<?php echo base_url(); ?>Rapat/autocomplete", {kirimNama: ""+namaAnggota+""}, function(data){
-                if(data.length >0) {
-                    $('#hasilPencarian').fadeIn();
-                    $('#dataPencarian').html(data);
-                }
-            });
-        }
-    } 
-    
-    function pilih(thisValue) {
-        $('#namaAnggota').val(thisValue);
-        //$('#tes').val(thisValue);
-        setTimeout("$('#hasilPencarian').fadeOut();", 100);
-    }
-</script>
-<script type="text/javascript">
+                        function cariAnggota(namaAnggota) {
+                            if(namaAnggota.length == 0) {
+                                $('#hasilPencarian').hide();
+                            } else {
+                                $.post("<?php echo base_url(); ?>Rapat/autocomplete", {kirimNama: ""+namaAnggota+""}, function(data){
+                                    if(data.length >0) {
+                                        $('#hasilPencarian').fadeIn();
+                                        $('#dataPencarian').html(data);
+                                    }
+                                });
+                            }
+                        } 
+                        
+                        function pilih(thisValue) {
+                            $('#namaAnggota').val(thisValue);
+                            //$('#tes').val(thisValue);
+                            setTimeout("$('#hasilPencarian').fadeOut();", 100);
+                        }
+                    </script>
+                    <script type="text/javascript">
 
-$(function(){
+                        $(function(){
 
-$.ajaxSetup({
-type:"POST",
-url: "<?php echo site_url('Anggota/alat_kelengkapan')?>",
-cache: false,
-});
+                        $.ajaxSetup({
+                        type:"POST",
+                        url: "<?php echo site_url('Anggota/alat_kelengkapan')?>",
+                        cache: false,
+                        });
 
-$("#anggota_badan").change(function(){
+                        $("#anggota_badan").change(function(){
 
-var value=$(this).val();
+                        var value=$(this).val();
 
-$.ajax({
-data:{id:value,modul:'anggota_badan'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
-}
-})
-
-
-});
-
-$("#anggota_pansus").change(function(){
-
-var value=$(this).val();
-
-$.ajax({
-data:{id:value,modul:'anggota_pansus'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
-}
-})
+                        $.ajax({
+                        data:{id:value,modul:'anggota_badan'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
+                        }
+                        })
 
 
-});
+                        });
 
-$("#anggota_panja").change(function(){
+                        $("#anggota_pansus").change(function(){
 
-var value=$(this).val();
+                        var value=$(this).val();
 
-$.ajax({
-data:{id:value,modul:'anggota_panja'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
-}
-})
-
-
-});
-
-$("#anggota_komisi").change(function(){
-
-var value=$(this).val();
-
-$.ajax({
-data:{id:value,modul:'anggota_komisi'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
-}
-})
+                        $.ajax({
+                        data:{id:value,modul:'anggota_pansus'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
+                        }
+                        })
 
 
-});
+                        });
 
-$("#alat_kelengkapan").change(function(){
+                        $("#anggota_panja").change(function(){
 
-var value=$(this).val();
-if(value==4){
-$.ajax({
-data:{id:value,modul:'semua_anggota'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="semua">');
-}
-})
-}
+                        var value=$(this).val();
 
-});
+                        $.ajax({
+                        data:{id:value,modul:'anggota_panja'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
+                        }
+                        })
 
-$("#alat_kelengkapan").change(function(){
 
-var value=$(this).val();
-if(value==5){
-$.ajax({
-data:{id:value,modul:'semua_anggota'},
-success: function(respond){
-$("#anggota_ak").html(respond);
-$("#ak").html('<input type="hidden" name="ak" value="intek">');
-}
-})
-}
+                        });
 
-});
+                        $("#anggota_komisi").change(function(){
 
-})
+                        var value=$(this).val();
 
-</script>
-<script>
-$(document).ready(function(){
-    $("#alat_kelengkapan").change(function(){
-        var value=$(this).val();
-        if(value==2){
-            $('#sub1').show('fast');
-            $('#sub2').hide('fast');
-            $('#sub3').hide('fast');
-            $('#sub4').hide('fast');
-        }
-        else if(value==1){
-            $('#sub2').show('fast');
-            $('#sub1').hide('fast');
-            $('#sub3').hide('fast');
-            $('#sub4').hide('fast');
-        }
-        else if(value==3){
-            $('#sub3').show('fast');
-            $('#sub1').hide('fast');
-            $('#sub2').hide('fast');
-            $('#sub4').hide('fast');
-        }
-        else if(value==6){
-            $('#sub4').show('fast');
-            $('#sub1').hide('fast');
-            $('#sub2').hide('fast');
-            $('#sub3').hide('fast');
-        }
-        else{
-            $('#sub3').hide('fast');
-            $('#sub1').hide('fast');
-            $('#sub2').hide('fast');
-            $('#sub4').hide('fast');
-        }
-       
-    });
-});
-</script>
+                        $.ajax({
+                        data:{id:value,modul:'anggota_komisi'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="'+value+'">');
+                        }
+                        })
+
+
+                        });
+
+                        $("#alat_kelengkapan").change(function(){
+
+                        var value=$(this).val();
+                        if(value==4){
+                        $.ajax({
+                        data:{id:value,modul:'semua_anggota'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="semua">');
+                        }
+                        })
+                        }
+
+                        });
+
+                        $("#alat_kelengkapan").change(function(){
+
+                        var value=$(this).val();
+                        if(value==5){
+                        $.ajax({
+                        data:{id:value,modul:'semua_anggota'},
+                        success: function(respond){
+                        $("#anggota_ak").html(respond);
+                        $("#ak").html('<input type="hidden" name="ak" value="intek">');
+                        }
+                        })
+                        }
+
+                        });
+
+                        })
+
+                    </script>
+                    <script>
+                        $(document).ready(function(){
+                        $("#alat_kelengkapan").change(function(){
+                            var value=$(this).val();
+                            if(value==2){
+                                $('#sub1').show('fast');
+                                $('#sub2').hide('fast');
+                                $('#sub3').hide('fast');
+                                $('#sub4').hide('fast');
+                            }
+                            else if(value==1){
+                                $('#sub2').show('fast');
+                                $('#sub1').hide('fast');
+                                $('#sub3').hide('fast');
+                                $('#sub4').hide('fast');
+                            }
+                            else if(value==3){
+                                $('#sub3').show('fast');
+                                $('#sub1').hide('fast');
+                                $('#sub2').hide('fast');
+                                $('#sub4').hide('fast');
+                            }
+                            else if(value==6){
+                                $('#sub4').show('fast');
+                                $('#sub1').hide('fast');
+                                $('#sub2').hide('fast');
+                                $('#sub3').hide('fast');
+                            }
+                            else{
+                                $('#sub3').hide('fast');
+                                $('#sub1').hide('fast');
+                                $('#sub2').hide('fast');
+                                $('#sub4').hide('fast');
+                            }
+                           
+                        });
+                        });
+                    </script>
                     <!-- END PAGE BAR -->
                     <!-- BEGIN PAGE TITLE-->
                     <h3 class="page-title"> Tambah Data
@@ -1311,40 +1320,40 @@ $(document).ready(function(){
                                     </form>
                                 </div>
                             </div>
-<script language='javascript'>
+                            <script language='javascript'>
 
-                    function validAngka(a)
+                                                function validAngka(a)
 
-                    {
+                                                {
 
-                        if(!/^[0-9]+$/.test(a.value))
+                                                    if(!/^[0-9]+$/.test(a.value))
 
-                        {
+                                                    {
 
-                        a.value = a.value.substring(0,a.value.length-1000);
+                                                    a.value = a.value.substring(0,a.value.length-1000);
 
-                        }
+                                                    }
 
-                    }
+                                                }
 
-</script>  
-<script language='javascript'>
+                            </script>  
+                            <script language='javascript'>
 
-                    function validHuruf(a)
+                                                function validHuruf(a)
 
-                    {
+                                                {
 
-                        if(!/^[a-z, A-Z.']+$/.test(a.value))
+                                                    if(!/^[a-z, A-Z.']+$/.test(a.value))
 
-                        {
+                                                    {
 
-                        a.value = a.value.substring(0,a.value.length-1000);
+                                                    a.value = a.value.substring(0,a.value.length-1000);
 
-                        }
+                                                    }
 
-                    }
+                                                }
 
-</script>
+                            </script>
                 </div>
         
             </div>
@@ -1353,7 +1362,7 @@ $(document).ready(function(){
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> 2014 &copy; Metronic by keenthemes.
+            <div class="page-footer-inner"> 2018 &copy; DPRD Kota Semarang.
                 <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
             </div>
             <div class="scroll-to-top">
@@ -1395,4 +1404,5 @@ $(document).ready(function(){
         <script src="<?=base_url('assets/layouts/global/scripts/quick-sidebar.min.js');?>" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
     </body>
+    
 </html>

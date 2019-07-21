@@ -21,11 +21,12 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Login</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="" name="description" />
-        <meta content="" name="author" />
+        <meta name="keywords" content="Transparansi Publik, Aplikasi Perjalanan Dinas, DPRD Kota Semarang, Sindangjalin">
+		<meta content="Situs resmi dari DPRD Kota Semarang mengenai Perjalanan Dinas yang dilaksanakan" name="description" />
+		<meta content="DPRD Kota Semarang" name="author" />
+		<title>Sindangjalin | DPRD Kota Semarang</title>
         <style type="text/css">
             @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
             @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
@@ -229,7 +230,7 @@ License: You must have a valid license purchased only from themeforest(the above
                color: rgba(255,255,255,0.6);
             }
         </style> 
-        <link rel="shortcut icon" href="<?=base_url('assets/hai.ico');?>" />   
+        <link rel="shortcut icon" href="<?=base_url('assets/admin.png');?>" />   
     </head>
     <!-- END HEAD -->
 

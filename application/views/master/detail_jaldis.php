@@ -255,10 +255,12 @@
                     <?php
                                                             if($ket_tanggal>date('Y-m-d')){
                                                                 echo '<a class="dt-button buttons-print btn red btn-outline" href="#" tabindex="0" aria-controls="sample_1"><span>Laporan</span></a>';
+                                                                echo '<a class="dt-button buttons-print btn red btn-outline" href="#" tabindex="0" aria-controls="sample_1"><span>Cetak Laporan</span></a>';
                                                             }
                                                             else{
                     ?>
                     <a class="dt-button buttons-print btn red btn-outline" href="<?php echo site_url('Master/laporan_jaldis/'.$this->uri->segment(3))?>" tabindex="0" aria-controls="sample_1"><span>Laporan</span></a>
+                    <a class="dt-button buttons-print btn red btn-outline" href="<?php echo site_url('Phpword/download_laporan/'.$this->uri->segment(3))?>" tabindex="0" aria-controls="sample_1"><span>Cetak Laporan</span></a>
                     <?php } ?>
                   </div>
                   <table class="table table-bordered table-striped" id="jaldis">
@@ -496,7 +498,8 @@
       </div>
       <div class="modal-body">   
         <div class="box box-primary">       
-          <form class="form-horizontal" method="post" action="<?php echo base_url()."Surat/cetak_spd"; ?>" target='_blank' enctype='multipart/form-data'>
+          <!-- <form class="form-horizontal" method="post" action="<?php echo base_url()."Surat/cetak_spd"; ?>" target='_blank' enctype='multipart/form-data'> -->
+          <form class="form-horizontal" method="post" action="<?php echo base_url()."Phpword/downloadspd"; ?>" target='_blank' enctype='multipart/form-data'>
                 <div class="box-body">                
                 <div class="alert alert-info no-margin margin-top-10"> Note! Silahkan pilih anggota yang akan dicetakkan Surat Perjalanan Dinas-nya. </div>
                   <input name="kode_jaldis" type="hidden" value="<?= $this->uri->segment(3); ?>">
