@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="keywords" content="Transparansi Publik, Aplikasi Perjalanan Dinas, DPRD Kota Semarang, Sindangjalin">
-	<meta content="Situs resmi dari DPRD Kota Semarang mengenai Perjalanan Dinas yang dilaksanakan" name="description" />
+	<meta content='"Sindangjalin" (Sistem Informasi Persidangan dan Perjalanan Dinas) adalah aplikasi yang dibangun untuk memberikan kemudahan dalam pengelolaan data dan penyajian informasi kegiatan Persidangan dan perjalanan Dinas Dewan Perwakilan Raktyat Daerah Kota Semarang.' name="description" />
 	<meta content="DPRD Kota Semarang" name="author" />
 	<title>Sindangjalin | DPRD Kota Semarang</title>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -71,20 +71,7 @@
                             </div>
                           
 </form>                        </div>
-                        <!-- BEGIN FORGOT PASSWORD FORM -->
-                        <!-- END FORGOT PASSWORD FORM -->
-                    <div class="forget-form" style="display: none;">
-<form action="#" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="AK0PLejsNrTAet6rRQoHFPsuCOVKlV2aAksEF9PEz77QP9ydDud4Rh_i9sxPUe3-8BsbiWT8Tia8bZg3rgGrSz0f046jcEHpko1aOPxho_k1"><div class="validation-summary-valid text-danger" data-valmsg-summary="true"><ul><li style="display:none"></li>
-</ul></div>                            <h2 style="color:dimgrey">Forgot Password ?</h2>
-                            <p> Eter your e-mail address below to reset your password. </p>
-                            <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" required="">
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
-                                <button type="submit" class="btn btn-success uppercase pull-right">Submit</button>
-                            </div>
-</form>                    </div>
+
                 </div>
                 
 

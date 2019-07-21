@@ -3,7 +3,7 @@
 <head>
   	<meta charset="UTF-8">
 	<meta name="keywords" content="Transparansi Publik, Aplikasi Perjalanan Dinas, DPRD Kota Semarang, Sindangjalin">
-	<meta content="Situs resmi dari DPRD Kota Semarang mengenai Perjalanan Dinas yang dilaksanakan" name="description" />
+	<meta content='"Sindangjalin" (Sistem Informasi Persidangan dan Perjalanan Dinas) adalah aplikasi yang dibangun untuk memberikan kemudahan dalam pengelolaan data dan penyajian informasi kegiatan Persidangan dan perjalanan Dinas Dewan Perwakilan Raktyat Daerah Kota Semarang.' name="description" />
 	<meta content="DPRD Kota Semarang" name="author" />
   	<title>Sindangjalin | DPRD Kota Semarang</title>
   	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'>
