@@ -117,8 +117,8 @@
                                                             </div>
                                                            
                                                             <div class="form-actions">
-                                                                <button type="submit" class="btn green"> Save Changes </button>
-                                                                <button type="reset" class="btn default"> Reset </button>
+                                                                <button type="submit" class="btn green"> Simpan </button>
+                                                                <button type="reset" class="btn default"> Batal </button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -138,16 +138,16 @@
                                                                     <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                                     <div>
                                                                         <span class="btn default btn-file">
-                                                                            <span class="fileinput-new"> Select image </span>
-                                                                            <span class="fileinput-exists"> Change </span>
+                                                                            <span class="fileinput-new"> Pilih gambar </span>
+                                                                            <span class="fileinput-exists"> Ganti</span>
                                                                             <input type="file" name="foto"> </span>
-                                                                        <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                                        <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-actions">
-                                                                <button type="submit" class="btn green"> Submit </button>
-                                                                <button type="reset" class="btn default"> Reset </button>
+                                                                <button type="submit" class="btn green"> Simpan </button>
+                                                                <button type="reset" class="btn default"> Batal </button>
                                                             </div>
                                                         </form>
                                                     </div>

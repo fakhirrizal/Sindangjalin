@@ -83,27 +83,27 @@
                                                         <form class="login-form" action="<?php echo site_url('User/ubah_email'); ?>" method="post">
                                                             <div class="form-group">
                                                                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                                                                <label class="control-label">Current Email</label>
+                                                                <label class="control-label">Email Sekarang</label>
                                                                 <div class="input-icon">
                                                                     <i class="fa fa-envelope"></i>
                                                                     <input value="<?php echo $value->email; ?>" class="form-control placeholder-no-fix" name="email" readonly/> </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="control-label">Current Password</label>
+                                                                <label class="control-label">Kata Sandi Saat Ini</label>
                                                                 <div class="input-icon">
                                                                     <i class="fa fa-lock"></i>
                                                                     <input class="form-control placeholder-no-fix" type="password" name="pass" placeholder="Password" maxlength="20" /> </div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                                                                <label class="control-label">New Email</label>
+                                                                <label class="control-label">Email Baru</label>
                                                                 <div class="input-icon">
                                                                     <i class="fa fa-envelope"></i>
                                                                     <input class="form-control placeholder-no-fix" type="email" autocomplete="off" placeholder="Email" name="email_new" maxlength="50" /> </div>
                                                             </div>
                                                             <div class="form-actions">
-                                                                <button type="submit" class="btn green"> Change Email </button>
-                                                                <button type="reset" class="btn default"> Reset </button>
+                                                                <button type="submit" class="btn green"> Simpan </button>
+                                                                <button type="reset" class="btn default"> Batal </button>
                                                             </div>
                                                         </form>
                                                     </div>

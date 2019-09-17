@@ -64,7 +64,7 @@
                                             <div class="box-footer">
 
                                                                         <div class="form-actions noborder">
-                                                                            <button type="submit" class="btn blue">Update</button>
-                                                                            <button type="reset" class="btn default">Reset</button>
+                                                                            <button type="submit" class="btn blue">Perbarui</button>
+                                                                            <button type="reset" class="btn default">Batal</button>
                                                                         </div>
                                             </div>

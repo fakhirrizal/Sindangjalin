@@ -159,8 +159,8 @@
                                                     </tbody>
                                                 </table>
                                                                                                   <div style="text-align: center;">
-                                                                                                          <button type="submit" class="btn green">Update</button>
-                                                                                                          <button type="button" class="btn red" data-dismiss="modal">Close</button>
+                                                                                                          <button type="submit" class="btn green">Perbarui</button>
+                                                                                                          <button type="button" class="btn red" data-dismiss="modal">Batal</button>
                                                                                                   </div>
                 </div>                                            
           </form>

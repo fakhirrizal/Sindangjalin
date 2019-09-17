@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <i class="icon-close"></i>
                                 </a>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <input type="text" class="form-control" placeholder="Cari...">
                                     <span class="input-group-btn">
                                         <a href="javascript:;" class="btn submit">
                                             <i class="icon-magnifier"></i>
@@ -489,7 +489,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li class="nav-item <?php if($active=='log_activity'){echo 'start active open';}else{echo '';} ?> ">
                             <a href="<?php echo site_url('Master/log_activity'); ?>" class="nav-link nav-toggle">
                                 <i class="icon-list"></i>
-                                <span class="title">Log Activity</span>
+                                <span class="title">Log Aktifitas</span>
                                 <?php if($active=='log_activity'){echo '<span class="selected"></span>';}else{echo '';} ?>
                             </a>
                            
@@ -1089,10 +1089,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" required accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                    
@@ -1106,10 +1106,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                   
@@ -1123,10 +1123,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                   
@@ -1135,8 +1135,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </div>
                                             <div class="col-md-offset-2 col-md-10">
                                                     <button type="submit" class="btn red">
-                                                        <i class="fa fa-check"></i> Submit</button>
-                                                    <button type="button" class="btn grey-salsa btn-outline">Cancel</button>
+                                                        <i class="fa fa-check"></i> Simpan</button>
+                                                    <button type="button" class="btn grey-salsa btn-outline">Batal</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1244,8 +1244,8 @@ if($data_foto==NULL){
             
             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -1311,8 +1311,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -1375,8 +1375,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -1439,8 +1439,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>

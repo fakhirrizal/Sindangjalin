@@ -64,7 +64,7 @@
                                                     </tbody>
                                                 </table>
                                                                                                   <div style="text-align: center;">
-                                                                                                          <button type="submit" class="btn green">Update</button>
+                                                                                                          <button type="submit" class="btn green">Perbarui</button>
                                                                                                           <a href="<?php echo base_url()."Master/lihat_panja"; ?>" class="btn btn-default red" role="button">Kembali</a>
                                                                                                   </div>
                                             </form>     

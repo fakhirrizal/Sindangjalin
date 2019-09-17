@@ -676,8 +676,8 @@ $(document).ready(function(){
                                             </div>
                                             <br>
                                         <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
                                         </div>
                                         
                                     </form>

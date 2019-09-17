@@ -122,8 +122,8 @@ foreach ($skpd as $row) {
 						
 						<br>
 						<div class="form-actions noborder">
-							<button type="submit" class="btn blue">Update</button>
-							<button type="button" data-dismiss="modal" class="btn default">Cancel</button>
+							<button type="submit" class="btn blue">Perbarui</button>
+							<button type="button" data-dismiss="modal" class="btn default">Batal</button>
 						</div>
 					</div>
 				</form>
@@ -166,8 +166,8 @@ foreach ($skpd as $row) {
 							</div>
 							<br>
 							<div class="form-actions noborder">
-								<button type="submit" class="btn blue">Save</button>
-								<button type="button" data-dismiss="modal" class="btn default">Cancel</button>
+								<button type="submit" class="btn blue">Simpan</button>
+								<button type="button" data-dismiss="modal" class="btn default">Batal</button>
 							</div>
 						</div>
 					</form>

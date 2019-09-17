@@ -234,7 +234,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <i class="icon-close"></i>
                                 </a>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <input type="text" class="form-control" placeholder="Cari...">
                                     <span class="input-group-btn">
                                         <a href="javascript:;" class="btn submit">
                                             <i class="icon-magnifier"></i>
@@ -499,7 +499,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li class="nav-item <?php if($active=='log_activity'){echo 'start active open';}else{echo '';} ?> ">
                             <a href="<?php echo site_url('Master/log_activity'); ?>" class="nav-link nav-toggle">
                                 <i class="icon-list"></i>
-                                <span class="title">Log Activity</span>
+                                <span class="title">Log Aktifitas</span>
                                 <?php if($active=='log_activity'){echo '<span class="selected"></span>';}else{echo '';} ?>
                             </a>
                            
@@ -908,8 +908,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="col-md-10">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <span class="btn green btn-file">
-                                                            <span class="fileinput-new"> Select file </span>
-                                                            <span class="fileinput-exists"> Change </span>
+                                                            <span class="fileinput-new"> Pilih berkas </span>
+                                                            <span class="fileinput-exists"> Ganti</span>
                                                             <input type="file" name="bukti_surat" accept="application/pdf"> </span>
                                                         <span class="fileinput-filename"> </span> &nbsp;
                                                         <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
@@ -1313,8 +1313,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div id="ak" style="display:none">
                                             </div>
                                         <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
                                         </div>
                                         
                                     </form>

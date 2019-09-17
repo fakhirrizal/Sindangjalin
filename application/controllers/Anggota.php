@@ -124,9 +124,9 @@ class Anggota extends CI_Controller {
 		}
 	}
 	public function detail_data(){
-		$data['active'] = 'anggota';
-		$data['sub'] = 'lihat_data';
-		$data['sub2'] = '';
+		$data['active'] = 'master';
+		$data['sub'] = 'anggota';
+		$data['sub2'] = 'lihat_data';
 		if(($this->session->userdata('id'))==NULL){
             echo "<script>alert('Harap login terlebih dahulu')</script>";
             echo "<script>window.location='".base_url()."admin/'</script>";
@@ -192,8 +192,8 @@ class Anggota extends CI_Controller {
          }
 	}
 	public function ubah_data(){
-		$data['active'] = 'anggota';
-		$data['sub'] = 'lihat_data';
+		$data['active'] = 'master';
+		$data['sub'] = 'anggota';
 		$data['sub2'] = '';
 		if(($this->session->userdata('id'))==NULL){
             echo "<script>alert('Harap login terlebih dahulu')</script>";

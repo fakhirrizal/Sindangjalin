@@ -2,7 +2,7 @@
                     <!-- END PAGE BAR -->
                     <!-- BEGIN PAGE TITLE-->
                     <h3 class="page-title">Rekap
-                        <small>Log Activity</small>
+                        <small>Log Aktifitas</small>
                     </h3>
                     <!-- END PAGE TITLE-->
                     <!-- END PAGE HEADER-->

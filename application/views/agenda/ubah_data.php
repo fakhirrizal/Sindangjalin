@@ -37,8 +37,8 @@
                                                 <div class="col-md-10">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <span class="btn green btn-file">
-                                                            <span class="fileinput-new"> Select file </span>
-                                                            <span class="fileinput-exists"> Change </span>
+                                                            <span class="fileinput-new"> Pilih berkas </span>
+                                                            <span class="fileinput-exists"> Ganti</span>
                                                             <input type="file" name="bukti_surat" required accept="application/pdf"> </span>
                                                         <span class="fileinput-filename"> </span> &nbsp;
                                                         <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
@@ -133,8 +133,8 @@
                                             <br>
                                             <?php } ?>
                                         <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Update</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Perbarui</button>
+                                            <button type="reset" class="btn default">Batal</button>
                                         </div>
                                         
                                     </form>

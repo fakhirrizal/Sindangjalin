@@ -24,8 +24,8 @@
                                                             </div>
                                                             
                                                             <div class="form-actions">
-                                                                <button type="submit" class="btn green"> Save Changes </button>
-                                                                <button type="reset" class="btn default"> Reset </button>
+                                                                <button type="submit" class="btn green"> Simpan </button>
+                                                                <button type="reset" class="btn default"> Batal </button>
                                                             </div>
                                                         <?php } ?>
                                                         </form>

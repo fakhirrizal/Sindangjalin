@@ -238,7 +238,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <i class="icon-close"></i>
                                 </a>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <input type="text" class="form-control" placeholder="Cari...">
                                     <span class="input-group-btn">
                                         <a href="javascript:;" class="btn submit">
                                             <i class="icon-magnifier"></i>
@@ -503,7 +503,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li class="nav-item <?php if($active=='log_activity'){echo 'start active open';}else{echo '';} ?> ">
                             <a href="<?php echo site_url('Master/log_activity'); ?>" class="nav-link nav-toggle">
                                 <i class="icon-list"></i>
-                                <span class="title">Log Activity</span>
+                                <span class="title">Log Aktifitas</span>
                                 <?php if($active=='log_activity'){echo '<span class="selected"></span>';}else{echo '';} ?>
                             </a>
                            

@@ -408,10 +408,10 @@
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" required accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                    
@@ -425,10 +425,10 @@
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                   
@@ -442,10 +442,10 @@
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                         <div>
                                                             <span class="btn default btn-file">
-                                                                <span class="fileinput-new"> Select image </span>
-                                                                <span class="fileinput-exists"> Change </span>
+                                                                <span class="fileinput-new"> Pilih gambar </span>
+                                                                <span class="fileinput-exists"> Ganti</span>
                                                                 <input type="file" name="foto[]" multiple="" accept="image/*"> </span>
-                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                            <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Batal </a>
                                                         </div>
                                                     </div>
                                                   
@@ -454,8 +454,8 @@
                                             </div>
                                             <div class="col-md-offset-2 col-md-10">
                                                     <button type="submit" class="btn red">
-                                                        <i class="fa fa-check"></i> Submit</button>
-                                                    <button type="button" class="btn grey-salsa btn-outline">Cancel</button>
+                                                        <i class="fa fa-check"></i> Simpan</button>
+                                                    <button type="button" class="btn grey-salsa btn-outline">Batal</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -536,8 +536,8 @@ if($data_foto==NULL){
             </div>
             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -603,8 +603,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -667,8 +667,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>
@@ -731,8 +731,8 @@ if($data_foto==NULL){
                                             </div>
                                             <br>
             <div class="form-actions noborder">
-                                            <button type="submit" class="btn blue">Submit</button>
-                                            <button type="reset" class="btn default">Reset</button>
+                                            <button type="submit" class="btn blue">Simpan</button>
+                                            <button type="reset" class="btn default">Batal</button>
             </div>
           </form>
         </div>

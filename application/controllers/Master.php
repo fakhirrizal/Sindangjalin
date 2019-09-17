@@ -18,6 +18,7 @@ class Master extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	/* Pimpinan */
 	public function pimpinan(){
 		$data['active'] = 'master';
 		$data['sub'] = 'alat_kelengkapan';
@@ -99,6 +100,7 @@ class Master extends CI_Controller {
         $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil diubah.<br /></div>' );
 			redirect('Master/pimpinan');
 	}
+	/* Panja (Panitia Kerja) */
 	public function tambah_panja(){
 		$data['active'] = 'master';
 		$data['sub'] = 'alat_kelengkapan';
@@ -301,6 +303,7 @@ class Master extends CI_Controller {
                 $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
                 echo "<script>window.location='".base_url()."Master/lihat_panja'</script>";
 	}
+	/* SKPD */
 	public function skpd(){
 		$data['active'] = 'master';
 		$data['sub'] = 'skpd';
@@ -368,6 +371,7 @@ class Master extends CI_Controller {
 		$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
 			redirect('Master/skpd');
 	}
+	/* Partai */
 	public function tambah_partai()
 	{
 		$data['active'] = 'master';
@@ -424,7 +428,7 @@ class Master extends CI_Controller {
 	public function detail_partai(){
 		$data['active'] = 'master';
 		$data['sub'] = 'partai';
-		$data['sub2'] = '';
+		$data['sub2'] = 'lihat_data';
 		$where['id_partai'] = $this->uri->segment(3);
 		$data['partai'] = $this->Main_model->getSelectedData('tblpartai',$where);
 		$this->load->view('template/header',$data);
@@ -529,6 +533,7 @@ class Master extends CI_Controller {
                 }
          }
 	}
+	/* Kode Rekening */
 	public function kode_rekening(){
 		$data['active'] = 'master';
 		$data['sub'] = 'kode_rekening';
@@ -594,6 +599,7 @@ class Master extends CI_Controller {
 		$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
 			redirect('Master/kode_rekening');
 	}
+	/* Nomor Surat */
 	public function nomor_surat(){
 		$data['active'] = 'master';
 		$data['sub'] = 'nomor_surat';
@@ -663,6 +669,7 @@ class Master extends CI_Controller {
 		$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
 			redirect('Master/nomor_surat');
 	}
+	/* Kategori Keperluan */
 	public function kategori_keperluan(){
 		if(($this->session->userdata('id'))==NULL){
 			echo "<script>alert('Harap login terlebih dahulu')</script>";
@@ -747,6 +754,7 @@ class Master extends CI_Controller {
                 echo "<script>window.location='".base_url()."Master/kategori_keperluan/'</script>";
         }
 	}
+	/* Jaldi */
 	public function buat_jaldis()
 	{
 		$data['active'] = 'jaldis';
@@ -1381,6 +1389,22 @@ class Master extends CI_Controller {
                 $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
                 echo "<script>window.location='".base_url()."Master/lihat_jaldis'</script>";
 	}
+	public function download(){
+		$data['active'] = '';
+		$data['sub'] = '';
+		$data['sub2'] = '';
+		if(($this->session->userdata('id'))==NULL){
+            echo "<script>alert('Harap login terlebih dahulu')</script>";
+            echo "<script>window.location='".base_url()."admin/'</script>";
+    	}
+    	else{
+    	
+		$data['data_jaldis'] = $this->Main_model->getDataJaldis();
+		$this->load->view('master/cetak_data',$data);
+		
+		}
+	}
+	/* Pansus (Panitia Khusus) */
 	public function tambah_pansus(){
 		$data['active'] = 'master';
 		$data['sub'] = 'alat_kelengkapan';
@@ -1583,6 +1607,7 @@ class Master extends CI_Controller {
                 $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
                 echo "<script>window.location='".base_url()."Master/lihat_pansus'</script>";
 	}
+	/* Komisi */
 	public function lihat_komisi(){
 		$data['active'] = 'master';
 		$data['sub'] = 'alat_kelengkapan';
@@ -1763,6 +1788,7 @@ class Master extends CI_Controller {
 		$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil dihapus.<br /></div>' );
 			redirect('Master/lihat_komisi');
 	}
+	/* Badan */
 	public function tambah_badan(){
 		$data['active'] = 'master';
 		$data['sub'] = 'alat_kelengkapan';
@@ -1942,21 +1968,7 @@ class Master extends CI_Controller {
 		$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>Data telah berhasil diubah.<br /></div>' );
 	                redirect('Laporan/badan/'.$this->uri->segment(3));
 	}
-	public function download(){
-		$data['active'] = '';
-		$data['sub'] = '';
-		$data['sub2'] = '';
-		if(($this->session->userdata('id'))==NULL){
-            echo "<script>alert('Harap login terlebih dahulu')</script>";
-            echo "<script>window.location='".base_url()."admin/'</script>";
-    	}
-    	else{
-    	
-		$data['data_jaldis'] = $this->Main_model->getDataJaldis();
-		$this->load->view('master/cetak_data',$data);
-		
-		}
-	}
+	/* Other Function */
 	public function bantuan(){
 		$data['active'] = '';
 		$data['sub'] = '';
