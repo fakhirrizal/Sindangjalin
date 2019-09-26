@@ -29,6 +29,7 @@
                         <th style="text-align: center" >Jumlah Anggota</th>
                         <th style="text-align: center" >Alat Kelengkapan</th>
                         <th style="text-align: center" >Keterangan</th>
+                        <th style="text-align: center" >Unduh Laporan</th>
                         <th style="text-align: center" width="14%">Aksi</th>
                       </tr>
                     </thead>
@@ -123,6 +124,15 @@
                           
                         }
                         ?></td>
+                        <td style="text-align: center">
+                        <?php
+                        if($file_laporan==NULL){
+                          echo'-';
+                        }else{
+                        ?>
+                        <a class="dt-button buttons-print btn green btn-outline" href="<?= base_url().'/assets/laporan_jaldis/'.$file_laporan; ?>" tabindex="0" aria-controls="sample_1"><span>Unduh</span></a>
+                        <?php } ?>
+                        </td>
                         <td style="text-align: center">
                             <a class="btn btn-circle btn-icon-only yellow" href="<?php echo site_url('Master/detail_jaldis/'.$kode_jaldis)?>" title="detail data">
                                 <i class="icon-eye"></i>

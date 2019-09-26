@@ -104,7 +104,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         foreach ($notif as $key => $value) {
                                         echo '
                                         <li>
-                                            <a href="'.base_url().'Laporan/notulen/'.$value->kode_jaldis.'">
+                                            <a href="'.base_url().'Master/notulen/'.$value->kode_jaldis.'">
                                                 <span class="time">'.date('d-m-Y', strtotime($value->end_date)).'</span>
                                                 <span class="details">
                                                     <span class="label label-sm label-icon label-success">
